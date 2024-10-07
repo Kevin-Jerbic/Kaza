@@ -1,0 +1,110 @@
+.collapse {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.collapse__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff6060;
+  z-index: 1;
+  padding: 0 10px 0 10px;
+  text-align: left;
+}
+.collapse__container .arrow-up {
+  width: 30px !important;
+  transform: rotate(360deg);
+  transition: transform 0.2s ease-out;
+  -webkit-transition: transform 0.2s ease-out;
+  -moz-transition: transform 0.2s ease-out;
+  -ms-transition: transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+.collapse__container .arrow-down {
+  width: 30px !important;
+  transform: rotate(180deg);
+  transition: transform 0.2s ease-out;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transition: transform 0.2s ease-out;
+  -moz-transition: transform 0.2s ease-out;
+  -ms-transition: transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
+}
+.collapse__container p {
+  color: #ffffff;
+  font-size: 13px;
+}
+.collapse__textContent {
+  position: relative;
+  width: 335px;
+  top: -5px;
+  background-color: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+}
+.collapse__textContent_text {
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 320px;
+}
+.collapse__textContent_text p {
+  color: black;
+  font-size: 12px;
+}
+.collapse__textContent_text li {
+  color: black;
+}
+@media (min-width: 768px) {
+  .collapse {
+    width: auto;
+    align-items: center;
+  }
+  .collapse__container {
+    width: 700px;
+    height: 47px;
+    font-size: 24px;
+    padding: 0 20px 0 20px;
+    border-radius: 10px;
+  }
+  .collapse__textContent {
+    width: 700px;
+  }
+  .collapse__textContent_text {
+    width: auto;
+    padding: 0 20px 0 20px;
+    margin: 15px 0 15px 0;
+  }
+  .collapse__textContent_text p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .collapse__container {
+    width: 900px;
+  }
+  .collapse__textContent {
+    width: 900px;
+  }
+  .collapse__textContent_text p {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1440px) {
+  .collapse__container {
+    width: 1023px;
+  }
+  .collapse__textContent {
+    width: 1023px;
+  }
+}/*# sourceMappingURL=style.css.map */

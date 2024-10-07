@@ -1,0 +1,133 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.collapse {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+        // position: relative;
+        display: flex;
+        //  flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        background-color: $primary-color;
+        z-index: 1;
+
+        padding: 0 10px 0 10px;
+        text-align: left;
+
+        .arrow-up {
+            width: 30px !important;
+            transform: rotate(360deg);
+            transition: transform 0.2s ease-out;
+            -webkit-transition: transform 0.2s ease-out;
+            -moz-transition: transform 0.2s ease-out;
+            -ms-transition: transform 0.2s ease-out;
+            -o-transition: transform 0.2s ease-out;
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+        }
+
+        .arrow-down {
+            width: 30px !important;
+            transform: rotate(180deg);
+            transition: transform 0.2s ease-out;
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -webkit-transition: transform 0.2s ease-out;
+            -moz-transition: transform 0.2s ease-out;
+            -ms-transition: transform 0.2s ease-out;
+            -o-transition: transform 0.2s ease-out;
+        }
+
+        p {
+            color: $secondary-color;
+            font-size: 13px;
+        }
+    }
+
+    &__textContent {
+        position: relative;
+        width: 335px;
+        top: -5px;
+        background-color: $tertiary-color;
+        border-radius: 0 0 5px 5px;
+
+        &_text {
+            margin: auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            width: 320px;
+
+            p {
+                color: black;
+                font-size: 12px;
+            }
+            li {
+                color: black;
+            }
+        }
+    }
+
+    // -------------------//
+    // --- Responsive --- //
+    // -------------------//
+    @include tabletMinBreakPoint {
+        width: auto;
+        align-items: center;
+
+        &__container {
+            width: 700px;
+            height: 47px;
+            font-size: 24px;
+            padding: 0 20px 0 20px;
+            border-radius: 10px;
+        }
+        &__textContent {
+            width: 700px;
+
+            &_text {
+                width: auto;
+                padding: 0 20px 0 20px;
+                margin: 15px 0 15px 0;
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @include laptopMinBreakPoint {
+        &__container {
+            width: 900px;
+        }
+
+        &__textContent {
+            width: 900px;
+            &_text {
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    @include largeMinBreakPoint {
+        &__container {
+            width: 1023px;
+        }
+
+        &__textContent {
+            width: 1023px;
+        }
+    }
+}

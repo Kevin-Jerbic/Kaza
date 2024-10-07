@@ -1,0 +1,32 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.tagLocation {
+    background-color: $primary-color;
+    width: auto;
+
+    height: 18px;
+    border-radius: 5px;
+    margin-right: 10px;
+
+    p {
+        color: $secondary-color;
+        font-size: 10px;
+        text-align: center;
+        line-height: 18px;
+        padding: 0 10px 0 10px;
+    }
+
+    // ------------------- //
+    // ---- Responsive --- //
+    // ------------------- //
+    @include tabletMinBreakPoint {
+        height: 25px;
+        border-radius: $border-radius;
+
+        p {
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.header {
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 335px;
+        height: 47px;
+        margin: 20px 0 17px 0px;
+
+        img {
+            width: 145px;
+            height: 47px;
+        }
+
+        ul {
+            display: flex;
+            gap: 10px;
+
+            li {
+                font-size: 12px;
+                font-weight: 500;
+                text-transform: uppercase;
+
+                a {
+                    color: black;
+                }
+            }
+        }
+
+        .active a {
+            text-decoration: underline;
+        }
+    }
+
+    // *** Responsive *** //
+
+    @include tabletMinBreakPoint {
+        width: $screen-tablet;
+
+        div {
+            margin: auto;
+            width: 700px;
+            margin-top: 40px;
+            margin-bottom: 63px;
+
+            ul {
+                gap: 34px;
+
+                li {
+                    font-size: 24px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    @include laptopMinBreakPoint {
+        width: $screen-laptop;
+
+        div {
+            width: 900px;
+        }
+    }
+    @include largeMinBreakPoint {
+        width: $screen-large;
+
+        div {
+            width: 1240px;
+        }
+    }
+}

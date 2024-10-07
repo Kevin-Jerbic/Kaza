@@ -1,0 +1,21 @@
+.rating {
+  width: 220px;
+}
+.rating_stars {
+  display: flex;
+  flex-direction: row !important;
+  gap: 5%;
+}
+.rating_stars img {
+  width: 15px;
+  height: 15px;
+}
+@media (min-width: 768px) {
+  .rating__stars {
+    justify-content: flex-end;
+  }
+  .rating img {
+    width: auto;
+    height: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,60 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.slideshow {
+    width: 335px;
+    height: 255px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $border-radius;
+
+    span {
+        display: none;
+    }
+
+    .arrow_back,
+    .arrow_forward {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    &__arrows {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3%;
+    }
+
+    // ------------------- //
+    // ---- Responsive --- //
+    // ------------------- //
+    @include tabletMinBreakPoint {
+        width: 700px;
+        height: 415px;
+        border-radius: $border-radius-md;
+        background-position-x: center;
+        background-position-y: 90%;
+
+        span {
+            position: relative;
+            display: block;
+            text-align: center;
+            color: $secondary-color;
+            bottom: -30%;
+        }
+        .arrow_back,
+        .arrow_forward {
+            width: 70px;
+            height: 80px;
+        }
+    }
+    @include laptopMinBreakPoint {
+        width: 960px;
+    }
+    @include largeMinBreakPoint {
+        width: 1240px;
+    }
+}
