@@ -1,0 +1,165 @@
+.apart {
+  width: 375px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.apart__slideshow {
+  width: 375px;
+  display: flex;
+  justify-content: center;
+}
+.apart__profil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.apart__profil__name {
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.apart__profil__name__title {
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.apart__profil__name__title p {
+  font-size: 14px;
+  color: black;
+}
+.apart__profil__name__tags {
+  width: 335px;
+  display: flex;
+}
+.apart__profil__host {
+  display: flex;
+  width: 335px;
+  justify-content: space-between;
+  align-items: center;
+}
+.apart__profil__host__hoster {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.apart__profil__host__hoster img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.apart__profil__host__hoster p {
+  width: 80px;
+  text-align: end;
+  font-size: 12px;
+  align-content: center;
+}
+.apart__collapse {
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .apart {
+    width: 768px;
+    margin: auto;
+    margin-top: -30px;
+    gap: 25px;
+  }
+  .apart__slideshow {
+    width: 700px;
+    height: 415px;
+  }
+  .apart__profil {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .apart__profil__name {
+    width: 50%;
+  }
+  .apart__profil__name__title {
+    width: 100%;
+  }
+  .apart__profil__name__title p {
+    font-size: 18px;
+  }
+  .apart__profil__name__tags {
+    width: auto;
+  }
+  .apart__profil__host {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 50%;
+  }
+  .apart__profil__host__hoster {
+    align-items: flex-start;
+    height: 64px;
+  }
+  .apart__profil__host__hoster p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .apart__profil__host__hoster img {
+    width: 64px;
+    height: 64px;
+  }
+  .apart__collapse .collapse__textContent {
+    border-radius: 0 0 10px 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .apart {
+    width: 1024px;
+  }
+  .apart__slideshow {
+    width: 900px;
+  }
+  .apart__profil {
+    width: 900px;
+  }
+  .apart__collapse {
+    width: 900px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 76px;
+  }
+  .apart__collapse .collapse {
+    width: 50%;
+  }
+  .apart__collapse .collapse h3 {
+    font-size: 18px;
+  }
+  .apart__collapse .collapse__container {
+    width: 100%;
+  }
+  .apart__collapse .collapse__textContent {
+    width: 100%;
+  }
+  .apart__collapse .collapse__textContent_text {
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .apart {
+    width: 1440px;
+  }
+  .apart__slideshow {
+    width: 1240px;
+  }
+  .apart__profil {
+    width: 1240px;
+  }
+  .apart__collapse {
+    width: 1240px;
+  }
+}/*# sourceMappingURL=style.css.map */

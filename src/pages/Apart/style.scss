@@ -1,0 +1,198 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.apart {
+    width: 375px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    &__slideshow {
+        width: 375px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__profil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+
+        &__name {
+            width: 335px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &__title {
+                width: 335px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                p {
+                    font-size: 14px;
+                    color: black;
+                }
+            }
+
+            &__tags {
+                width: 335px;
+                display: flex;
+            }
+        }
+
+        &__host {
+            display: flex;
+            width: 335px;
+            justify-content: space-between;
+            align-items: center;
+
+            &__hoster {
+                display: flex;
+                width: 100%;
+                justify-content: flex-end;
+                gap: 10px;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+
+                p {
+                    width: 80px;
+                    text-align: end;
+                    font-size: 12px;
+                    align-content: center;
+                }
+            }
+        }
+    }
+
+    &__collapse {
+        width: 335px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    // ------------------- //
+    // ---- Responsive --- //
+    // ------------------- //
+    @include tabletMinBreakPoint {
+        width: $screen-tablet;
+        // position: relative;
+        margin: auto;
+        margin-top: -30px;
+        gap: 25px;
+
+        &__slideshow {
+            width: 700px;
+            height: 415px;
+        }
+
+        &__profil {
+            width: 700px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &__name {
+                width: 50%;
+
+                &__title {
+                    width: 100%;
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+
+                &__tags {
+                    width: auto;
+                }
+            }
+
+            &__host {
+                flex-direction: column-reverse;
+                justify-content: space-evenly;
+                align-items: flex-end;
+                width: 50%;
+
+                &__hoster {
+                    align-items: flex-start;
+                    height: 64px;
+
+                    p {
+                        font-size: 18px;
+                        line-height: 30px;
+                    }
+
+                    img {
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+            }
+        }
+        &__collapse {
+            .collapse__textContent {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+
+    @include laptopMinBreakPoint {
+        width: $screen-laptop;
+
+        &__slideshow {
+            width: 900px;
+        }
+        &__profil {
+            width: 900px;
+        }
+        &__collapse {
+            width: 900px;
+            flex-direction: row;
+            justify-content: center;
+            gap: 76px;
+
+            .collapse {
+                width: 50%;
+                h3 {
+                    font-size: 18px;
+                }
+            }
+            .collapse__container {
+                width: 100%;
+            }
+
+            .collapse__textContent {
+                width: 100%;
+
+                &_text {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+
+    @include largeMinBreakPoint {
+        width: $screen-large;
+
+        &__slideshow {
+            width: 1240px;
+        }
+
+        &__profil {
+            width: 1240px;
+        }
+
+        &__collapse {
+            width: 1240px;
+        }
+    }
+}
