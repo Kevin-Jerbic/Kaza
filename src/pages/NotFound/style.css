@@ -1,0 +1,61 @@
+.error_container {
+  max-width: 375px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .error_container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .error_container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1440px) {
+  .error_container {
+    max-width: 1440px;
+  }
+}
+
+.error_container__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error_container__body__message {
+  text-align: center;
+}
+.error_container__body__message_number {
+  font-size: 96px;
+  font-weight: 700;
+  margin: 15px 0 11px 0;
+}
+.error_container__body__message_back {
+  margin: 71px 0 40px 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+.error_container__body__message_back a {
+  text-decoration: underline;
+  color: black;
+}
+.error_container__body__message_oups {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .error_container__body__message_number {
+    font-size: 288px;
+  }
+  .error_container__body__message_back {
+    font-size: 18px;
+  }
+  .error_container__body__message_oups {
+    font-size: 36px;
+  }
+  .error_container__body__message_oups br {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

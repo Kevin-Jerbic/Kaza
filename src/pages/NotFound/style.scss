@@ -1,0 +1,75 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.error_container {
+    max-width: 375px;
+    margin: auto;
+
+    // ------------------- //
+    // ---- Responsive --- //
+    // ------------------- //
+    @include tabletMinBreakPoint {
+        max-width: $screen-tablet;
+    }
+
+    @include laptopMinBreakPoint {
+        max-width: $screen-laptop;
+    }
+
+    @include largeMinBreakPoint {
+        max-width: $screen-large;
+    }
+}
+
+.error_container__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__message {
+        text-align: center;
+
+        &_number {
+            font-size: 96px;
+            font-weight: 700;
+            margin: 15px 0 11px 0;
+        }
+
+        &_back {
+            margin: 71px 0 40px 0;
+            font-weight: 500;
+            font-size: 14px;
+
+            a {
+                text-decoration: underline;
+                color: black;
+            }
+        }
+
+        &_oups {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        // ------------------- //
+        // ---- Responsive --- //
+        // ------------------- //
+        @include tabletMinBreakPoint {
+            &_number {
+                font-size: 288px;
+            }
+
+            &_back {
+                font-size: 18px;
+            }
+
+            &_oups {
+                font-size: 36px;
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
