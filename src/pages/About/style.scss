@@ -1,0 +1,57 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.about {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .banner {
+        img {
+            height: 223px;
+            object-fit: cover;
+        }
+    }
+
+    // ------------------- //
+    // ---- Responsive --- //
+    // ------------------- //
+    @include tabletMinBreakPoint {
+        width: $screen-tablet;
+    }
+
+    @include laptopMinBreakPoint {
+        width: $screen-laptop;
+    }
+
+    @include largeMinBreakPoint {
+        width: $screen-large;
+    }
+}
+
+.aboutBody {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 20px 0;
+
+    // ------------------- //
+    // ---- Responsive --- //
+    // ------------------- //
+    @include tabletMinBreakPoint {
+        width: $screen-tablet;
+    }
+
+    @include laptopMinBreakPoint {
+        width: $screen-laptop;
+        gap: 30px;
+    }
+
+    @include largeMinBreakPoint {
+        width: $screen-large;
+    }
+}
