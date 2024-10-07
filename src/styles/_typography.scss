@@ -1,0 +1,44 @@
+@import './mixins';
+@import './variables';
+
+h1 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+
+    @include tabletMinBreakPoint {
+        font-size: 36px;
+    }
+    @include laptopMinBreakPoint {
+        font-size: 48px;
+    }
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+
+    @include tabletMinBreakPoint {
+        font-size: 27px;
+    }
+    @include laptopMinBreakPoint {
+        font-size: 36px;
+    }
+}
+
+h3 {
+    font-size: 13px;
+    font-weight: 500;
+    color: $secondary-color;
+
+    @include tabletMinBreakPoint {
+        font-size: 18px;
+    }
+
+    @include laptopMinBreakPoint {
+        font-size: 24px;
+    }
+}
+p {
+    font-weight: 500;
+}

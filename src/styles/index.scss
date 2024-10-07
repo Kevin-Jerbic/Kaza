@@ -1,0 +1,17 @@
+@import './typography';
+
+@font-face {
+    font-family: 'Montserra';
+    src: url('../assets/fonts/Montserrat.ttf');
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Montserra', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: $primary-color;
+}
+a {
+    text-decoration: none;
+}

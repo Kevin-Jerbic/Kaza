@@ -1,0 +1,18 @@
+@import './variables';
+
+//Breakpoints
+@mixin tabletMinBreakPoint {
+    @media (min-width : #{$screen-tablet}) {
+        @content;
+    }
+}
+@mixin laptopMinBreakPoint {
+    @media (min-width : #{$screen-laptop}) {
+        @content;
+    }
+}
+@mixin largeMinBreakPoint {
+    @media (min-width : #{$screen-large}) {
+        @content;
+    }
+}
